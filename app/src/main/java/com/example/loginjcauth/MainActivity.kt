@@ -15,10 +15,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.loginjcauth.ui.theme.LoginJCAuthTheme
+import com.google.firebase.FirebaseApp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         enableEdgeToEdge()
         setContent {
             LoginJCAuthTheme {
